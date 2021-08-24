@@ -9,12 +9,8 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
-#provider "aws" {
-# region = terraform.workspace == "prod" ? "us-east-1" : "us-east-1"
-# profile = var.aws_profile
-#}
 
 terraform {
   backend "remote" {
