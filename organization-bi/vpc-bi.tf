@@ -41,7 +41,7 @@ resource "aws_subnet" "PROD-PUB-D" {
 #SUBNET HML-PUB-D
 resource "aws_subnet" "HML-PUB-D" {
   vpc_id            = aws_vpc.biviholding.id
-  cidr_block        = HML-PUB-D
+  cidr_block        = var.HML-PUB-D
   availability_zone = "us-east-1d"
 
   tags = {
@@ -55,7 +55,7 @@ resource "aws_subnet" "HML-PUB-D" {
 #SUBNET HML-PRIV-C
 resource "aws_subnet" "HML-PRIV-C" {
   vpc_id                  = aws_vpc.biviholding.id
-  cidr_block              = HML-PRIV-C
+  cidr_block              = var.HML-PRIV-C
   availability_zone       = "us-east-1c"
   map_public_ip_on_launch = false
 
