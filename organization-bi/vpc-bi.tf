@@ -93,8 +93,8 @@ resource "aws_nat_gateway" "nat-gw-biviholding" {
 }
 
 #### Grupo de seguranca 
-resource "aws_security_group" "sg-vpc-biviholding" {
-  name        = "sg-vpc-biviholding"
+resource "aws_security_group" "sgvpcbiviholding" {
+  name        = "sgvpcbiviholding"
   description = "Allow sg-vpc-biviholding"
   vpc_id      = aws_vpc.biviholding.id
   
