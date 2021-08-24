@@ -95,25 +95,25 @@ resource "aws_nat_gateway" "nat-gw-biviholding" {
 
 #GRUPO DE SEGURANCA VPC
 
-resource "aws_security_group" "vpc-biviholding" {
-  name   = "vpc-biviholding"
-  vpc_id = aws_vpc.biviholding
-  tags = {
-    NameArea = "Infra"
+#resource "aws_security_group" "vpc-biviholding" {
+#  name   = "vpc-biviholding"
+#  vpc_id = aws_vpc.biviholding
+#  tags = {
+#    NameArea = "Infra"
 
-  }
+#  }
 
 
-}
+#}
 
 
 #Route table create
 resource "aws_route_table" "rt-biviholding-public" {
-  vpc_id = aws_vpc.biviholding
+  vpc_id = aws_vpc.biviholding.id
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.igw-biviholding
+    gateway_id = aws_internet_gateway.igw-biviholding.id
   }
 
   tags = {
@@ -123,12 +123,12 @@ resource "aws_route_table" "rt-biviholding-public" {
 
 # terraform aws associate subnet with route table
 resource "aws_route_table_association" "rt-hml-pub-d" {
-  subnet_id      = aws_subnet.HML-PUB-D
-  route_table_id = aws_route_table.rt-biviholding-public
+  subnet_id      = aws_subnet.HML-PUB-D.id
+  route_table_id = aws_route_table.rt-biviholding-public.id
 }
 
 # terraform aws associate subnet with route table
 resource "aws_route_table_association" "rt-prod-pub-d" {
-  subnet_id      = aws_subnet.PROD-PUB-D
-  route_table_id = aws_route_table.rt-biviholding-public
+  subnet_id      = aws_subnet.PROD-PUB-D.id
+  route_table_id = aws_route_table.rt-biviholding-public.id
 }
