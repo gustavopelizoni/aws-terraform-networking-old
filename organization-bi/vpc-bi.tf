@@ -1,5 +1,4 @@
 # VPC biviholding
-# Create VPC
 # terraform aws create vpc
 resource "aws_vpc" "biviholding" {
   cidr_block           = var.vpc-biviholding
@@ -24,7 +23,7 @@ resource "aws_internet_gateway" "igw-biviholding" {
 }
 
 
-#####Subnet Public
+#####Subnet Public PROD
 
 #SUBNET PROD-PUB-D
 resource "aws_subnet" "PROD-PUB-D" {
@@ -38,6 +37,9 @@ resource "aws_subnet" "PROD-PUB-D" {
   }
 }
 
+#####Subnet Public PRD
+#####Subnet Public DEV
+#####Subnet Public HML
 #SUBNET HML-PUB-D
 resource "aws_subnet" "HML-PUB-D" {
   vpc_id            = aws_vpc.biviholding.id
@@ -50,7 +52,32 @@ resource "aws_subnet" "HML-PUB-D" {
   }
 }
 
-#####Subnet Private
+#####Subnet Private PROD
+#SUBNET PROD-PRV-A
+resource "aws_subnet" "PROD-PRV-A" {
+  vpc_id     = aws_vpc.biviholding.id
+  cidr_block = var.PROD-PRV-A
+
+  tags = {
+    Name     = "PROD-PRV-A"
+    NameArea = "Infra"
+  }
+}
+
+#SUBNET PROD-PRV-B
+resource "aws_subnet" "PROD-PRV-B" {
+  vpc_id     = aws_vpc.biviholding.id
+  cidr_block = var.PROD-PRV-B
+
+  tags = {
+    Name     = "PROD-PRV-B"
+    NameArea = "Infra"
+  }
+}
+
+#####Subnet Private DEV
+
+#####Subnet Private HML
 
 #SUBNET HML-PRIV-C
 resource "aws_subnet" "HML-PRIV-C" {
