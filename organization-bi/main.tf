@@ -7,14 +7,18 @@ terraform {
   }
 }
 
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
+}
 #provider "aws" {
- # region = terraform.workspace == "prod" ? "us-east-1" : "us-east-1"
-  # profile = var.aws_profile
+# region = terraform.workspace == "prod" ? "us-east-1" : "us-east-1"
+# profile = var.aws_profile
 #}
 
 terraform {
   backend "remote" {
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
     organization = "Almee"
 
     workspaces {
