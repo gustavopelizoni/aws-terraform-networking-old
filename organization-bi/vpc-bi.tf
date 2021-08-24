@@ -222,19 +222,6 @@ resource "aws_subnet" "HML-PRIV-C" {
 }
 
 
-#SUBNET HML-PRIV-C
-resource "aws_subnet" "HML-PRIV-C" {
-  vpc_id                  = aws_vpc.biviholding.id
-  cidr_block              = var.HML-PRIV-C
-  availability_zone       = "us-east-1c"
-  map_public_ip_on_launch = false
-
-  tags = {
-    Name     = "HML-PRIV-C"
-    NameArea = "Infra"
-  }
-}
-
 #Elastic IP Nat Gateway
 resource "aws_eip" "Nat_biviholding" {
   vpc = true
