@@ -97,8 +97,7 @@ resource "aws_security_group" "sg-vpc-biviholding" {
   name        = "sg-vpc-biviholding"
   description = "Allow sg-vpc-biviholding"
   vpc_id      = aws_vpc.biviholding.id
-  depends_on = aws_vpc.biviholding
-
+  
   ingress {
     from_port = "0"
     to_port   = "0"
