@@ -213,7 +213,7 @@ resource "aws_subnet" "HML-PRV-C" {
   vpc_id                  = aws_vpc.biviholding.id
   cidr_block              = var.HML-PRV-C
   availability_zone       = "us-east-1c"
-  map_public_ip_on_launch = false
+  #map_public_ip_on_launch = false
 
   tags = {
     Name     = "HML-PRV-C"
