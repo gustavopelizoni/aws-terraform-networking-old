@@ -181,42 +181,42 @@ resource "aws_subnet" "PROD-PRV-C" {
 
 #####Subnet Private HML
 #SUBNET HML-PRIV-A
-resource "aws_subnet" "HML-PRIV-A" {
+resource "aws_subnet" "HML-PRV-A" {
   vpc_id                  = aws_vpc.biviholding.id
-  cidr_block              = var.HML-PRIV-A
+  cidr_block              = var.HML-PRV-A
   availability_zone       = "us-east-1a"
   map_public_ip_on_launch = false
 
   tags = {
-    Name     = "HML-PRIV-A"
+    Name     = "HML-PRV-A"
     NameArea = "Infra"
   }
 }
 
 #####Subnet Private HML
-#SUBNET HML-PRIV-B
-resource "aws_subnet" "HML-PRIV-B" {
+#SUBNET HML-PRV-B
+resource "aws_subnet" "HML-PRV-B" {
   vpc_id                  = aws_vpc.biviholding.id
-  cidr_block              = var.HML-PRIV-B
+  cidr_block              = var.HML-PRV-B
   availability_zone       = "us-east-1b"
   map_public_ip_on_launch = false
 
   tags = {
-    Name     = "HML-PRIV-B"
+    Name     = "HML-PRV-B"
     NameArea = "Infra"
   }
 }
 
 #####Subnet Private HML
-#SUBNET HML-PRIV-C
-resource "aws_subnet" "HML-PRIV-C" {
+#SUBNET HML-PRV-C
+resource "aws_subnet" "HML-PRV-C" {
   vpc_id                  = aws_vpc.biviholding.id
-  cidr_block              = var.HML-PRIV-C
+  cidr_block              = var.HML-PRV-C
   availability_zone       = "us-east-1c"
   map_public_ip_on_launch = false
 
   tags = {
-    Name     = "HML-PRIV-C"
+    Name     = "HML-PRV-C"
     NameArea = "Infra"
   }
 }

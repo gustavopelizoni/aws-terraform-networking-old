@@ -92,19 +92,19 @@ variable "PROD-PRV-C" {
 
 #####Subnet Private DEV
 #####Subnet Private HML
-variable "HML-PRIV-A" {
+variable "HML-PRV-A" {
   default     = "10.251.40.0/21"
   description = "Hml"
   type        = string
 }
 
-variable "HML-PRIV-B" {
+variable "HML-PRV-B" {
   default     = "10.251.48.0/21"
   description = "Hml"
   type        = string
 }
 
-variable "HML-PRIV-C" {
+variable "HML-PRV-C" {
   default     = "10.251.56.0/21"
   description = "Hml"
   type        = string
