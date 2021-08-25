@@ -358,31 +358,31 @@ resource "aws_route_table_association" "rt-dev-pub-e" {
 #### Subnet HML PRIVATE
 resource "aws_route_table_association" "rt-hml-prv-a" {
   subnet_id      = aws_subnet.HML-PRV-A.id
-  route_table_id = aws_route_table.rt-biviholding-private
+  route_table_id = aws_route_table.rt-biviholding-private.id
 }
 
 resource "aws_route_table_association" "rt-hml-prv-b" {
   subnet_id      = aws_subnet.HML-PRV-B.id
-  route_table_id = aws_route_table.rt-biviholding-private
+  route_table_id = aws_route_table.rt-biviholding-private.id
 }
 
 resource "aws_route_table_association" "rt-hml-prv-c" {
   subnet_id      = aws_subnet.HML-PRV-C.id
-  route_table_id = aws_route_table.rt-biviholding-private
+  route_table_id = aws_route_table.rt-biviholding-private.id
 }
 
 #### Subnet PROD PRIVATE
 resource "aws_route_table_association" "rt-prod-prv-a" {
   subnet_id      = aws_subnet.PROD-PRV-A.id
-  route_table_id = aws_route_table.rt-biviholding-private
+  route_table_id = aws_route_table.rt-biviholding-private.id
 }
 
 resource "aws_route_table_association" "rt-prod-prv-b" {
   subnet_id      = aws_subnet.PROD-PRV-B.id
-  route_table_id = aws_route_table.rt-biviholding-private
+  route_table_id = aws_route_table.rt-biviholding-private.id
 }
 
 resource "aws_route_table_association" "rt-prod-prv-c" {
   subnet_id      = aws_subnet.PROD-PRV-C.id
-  route_table_id = aws_route_table.rt-biviholding-private
+  route_table_id = aws_route_table.rt-biviholding-private.id
 }
