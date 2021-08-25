@@ -40,8 +40,8 @@ resource "aws_subnet" "PROD-PUB-D" {
 #####Subnet Public PRD
 #SUBNET PROD-PUB-A
 resource "aws_subnet" "PROD-PUB-A" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.PROD-PUB-A
+  vpc_id            = aws_vpc.biviholding.id
+  cidr_block        = var.PROD-PUB-A
   availability_zone = "us-east-1a"
 
   tags = {
@@ -52,8 +52,8 @@ resource "aws_subnet" "PROD-PUB-A" {
 
 #SUBNET PROD-PUB-B
 resource "aws_subnet" "PROD-PUB-B" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.PROD-PUB-B
+  vpc_id            = aws_vpc.biviholding.id
+  cidr_block        = var.PROD-PUB-B
   availability_zone = "us-east-1b"
 
   tags = {
@@ -64,8 +64,8 @@ resource "aws_subnet" "PROD-PUB-B" {
 
 #SUBNET PROD-PUB-C
 resource "aws_subnet" "PROD-PUB-C" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.PROD-PUB-C
+  vpc_id            = aws_vpc.biviholding.id
+  cidr_block        = var.PROD-PUB-C
   availability_zone = "us-east-1c"
 
   tags = {
@@ -76,8 +76,8 @@ resource "aws_subnet" "PROD-PUB-C" {
 
 #SUBNET PROD-PUB-E
 resource "aws_subnet" "PROD-PUB-E" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.PROD-PUB-E
+  vpc_id            = aws_vpc.biviholding.id
+  cidr_block        = var.PROD-PUB-E
   availability_zone = "us-east-1e"
 
   tags = {
@@ -90,8 +90,8 @@ resource "aws_subnet" "PROD-PUB-E" {
 #####Subnet Public DEV
 #SUBNET DEV-PUB-D
 resource "aws_subnet" "DEV-PUB-D" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.DEV-PUB-D
+  vpc_id            = aws_vpc.biviholding.id
+  cidr_block        = var.DEV-PUB-D
   availability_zone = "us-east-1d"
 
   tags = {
@@ -102,8 +102,8 @@ resource "aws_subnet" "DEV-PUB-D" {
 
 #SUBNET DEV-PUB-E
 resource "aws_subnet" "DEV-PUB-E" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.DEV-PUB-E
+  vpc_id            = aws_vpc.biviholding.id
+  cidr_block        = var.DEV-PUB-E
   availability_zone = "us-east-1e"
 
   tags = {
@@ -139,11 +139,11 @@ resource "aws_subnet" "HML-PUB-E" {
 #####Subnet Private PROD
 #SUBNET PROD-PRV-A
 resource "aws_subnet" "PROD-PRV-A" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.PROD-PRV-A
-  availability_zone = "us-east-1a"
+  vpc_id                  = aws_vpc.biviholding.id
+  cidr_block              = var.PROD-PRV-A
+  availability_zone       = "us-east-1a"
   map_public_ip_on_launch = false
-  
+
 
   tags = {
     Name     = "PROD-PRV-A"
@@ -153,9 +153,9 @@ resource "aws_subnet" "PROD-PRV-A" {
 
 #SUBNET PROD-PRV-B
 resource "aws_subnet" "PROD-PRV-B" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.PROD-PRV-B
-  availability_zone = "us-east-1b"
+  vpc_id                  = aws_vpc.biviholding.id
+  cidr_block              = var.PROD-PRV-B
+  availability_zone       = "us-east-1b"
   map_public_ip_on_launch = false
 
   tags = {
@@ -166,9 +166,9 @@ resource "aws_subnet" "PROD-PRV-B" {
 
 #SUBNET PROD-PRV-C
 resource "aws_subnet" "PROD-PRV-C" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.PROD-PRV-C
-  availability_zone = "us-east-1c"
+  vpc_id                  = aws_vpc.biviholding.id
+  cidr_block              = var.PROD-PRV-C
+  availability_zone       = "us-east-1c"
   map_public_ip_on_launch = false
 
   tags = {
@@ -182,9 +182,9 @@ resource "aws_subnet" "PROD-PRV-C" {
 #####Subnet Private HML
 #SUBNET HML-PRIV-A
 resource "aws_subnet" "HML-PRIV-A" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.HML-PRIV-A
-  availability_zone = "us-east-1a"
+  vpc_id                  = aws_vpc.biviholding.id
+  cidr_block              = var.HML-PRIV-A
+  availability_zone       = "us-east-1a"
   map_public_ip_on_launch = false
 
   tags = {
@@ -196,9 +196,9 @@ resource "aws_subnet" "HML-PRIV-A" {
 #####Subnet Private HML
 #SUBNET HML-PRIV-B
 resource "aws_subnet" "HML-PRIV-B" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.HML-PRIV-B
-  availability_zone = "us-east-1b"
+  vpc_id                  = aws_vpc.biviholding.id
+  cidr_block              = var.HML-PRIV-B
+  availability_zone       = "us-east-1b"
   map_public_ip_on_launch = false
 
   tags = {
@@ -210,9 +210,9 @@ resource "aws_subnet" "HML-PRIV-B" {
 #####Subnet Private HML
 #SUBNET HML-PRIV-C
 resource "aws_subnet" "HML-PRIV-C" {
-  vpc_id     = aws_vpc.biviholding.id
-  cidr_block = var.HML-PRIV-C
-  availability_zone = "us-east-1c"
+  vpc_id                  = aws_vpc.biviholding.id
+  cidr_block              = var.HML-PRIV-C
+  availability_zone       = "us-east-1c"
   map_public_ip_on_launch = false
 
   tags = {
@@ -254,15 +254,15 @@ resource "aws_security_group" "sgvpcbiviholding" {
   name        = "sgvpcbiviholding"
   description = "Allow sg-vpc-biviholding"
   vpc_id      = aws_vpc.biviholding.id
-  
+
   ingress {
     from_port = "0"
     to_port   = "0"
     protocol  = "-1"
     self      = true
   }
-  
-    egress {
+
+  egress {
     from_port = "0"
     to_port   = "0"
     protocol  = "-1"
@@ -286,7 +286,7 @@ resource "aws_route_table" "rt-biviholding-public" {
 
   tags = {
     NameArea = "Infra"
-    Name = "rt-biviholding-public"
+    Name     = "rt-biviholding-public"
   }
 }
 
@@ -296,12 +296,12 @@ resource "aws_route_table" "rt-biviholding-private" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    nat_gateway_id = aws_nat_gateway.nat-gw-biviholding
+    gateway_id = aws_nat_gateway.nat-gw-biviholding.id
   }
 
   tags = {
     NameArea = "Infra"
-    Name = "rt-biviholding-private"
+    Name     = "rt-biviholding-private"
   }
 }
 # terraform aws associate subnet with route table
