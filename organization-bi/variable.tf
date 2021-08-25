@@ -31,17 +31,19 @@ variable "PROD-PUB-C" {
   type        = string
 }
 
-variable "PROD-PUB-E" {
-  default     = "10.251.32.0/21"
-  description = "Prod"
-  type        = string
-}
 
 variable "PROD-PUB-D" {
   default     = "10.251.24.0/21"
   description = "Prod"
   type        = string
 }
+
+variable "PROD-PUB-E" {
+  default     = "10.251.32.0/21"
+  description = "Prod"
+  type        = string
+}
+
 #####Subnet Public DEV
 variable "DEV-PUB-D" {
   default     = "10.251.104.0/21"
