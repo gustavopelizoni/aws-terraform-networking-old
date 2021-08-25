@@ -357,17 +357,17 @@ resource "aws_route_table_association" "rt-dev-pub-e" {
 # terraform aws associate subnet with route table PRIVATE
 #### Subnet HML PRIVATE
 resource "aws_route_table_association" "rt-hml-prv-a" {
-  subnet_id      = aws_subnet.PROD-HML-A.id
+  subnet_id      = aws_subnet.HML-PRV-A.id
   route_table_id = aws_route_table.rt-biviholding-private
 }
 
 resource "aws_route_table_association" "rt-hml-prv-b" {
-  subnet_id      = aws_subnet.PROD-HML-B.id
+  subnet_id      = aws_subnet.HML-PRV-B.id
   route_table_id = aws_route_table.rt-biviholding-private
 }
 
 resource "aws_route_table_association" "rt-hml-prv-c" {
-  subnet_id      = aws_subnet.PROD-HML-C.id
+  subnet_id      = aws_subnet.HML-PRV-C.id
   route_table_id = aws_route_table.rt-biviholding-private
 }
 
