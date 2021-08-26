@@ -8,3 +8,12 @@ resource "aws_customer_gateway" "Oracle" {
     Name = "Oracle"
   }
 }
+
+#Virtual private gateway
+resource "aws_vpn_gateway" "Oracle" {
+  vpc_id = aws_vpc.biviholding
+
+  tags = {
+    Name = "Oracle"
+  }
+}
