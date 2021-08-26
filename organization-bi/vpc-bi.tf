@@ -9,6 +9,7 @@ resource "aws_vpc" "biviholding" {
     Name : "biviholding"
     NameArea : "Infra"
     NameVPC : "biviholding"
+    Teste : "voceeomelhor"
   }
 }
 
