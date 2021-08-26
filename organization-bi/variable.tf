@@ -111,3 +111,11 @@ variable "HML-PRV-C" {
 }
 
 
+#### VPN Conection Oracle
+
+#variable "vpc-biviholding" {
+#  type        = string
+#  description = "The ID of the VPC to which the Virtual Private Gateway will be attached"
+#}
+#Module      : LABEL
+#Description : Terraform label module variables.

@@ -12,17 +12,6 @@ resource "aws_vpc" "biviholding" {
   }
 }
 
-#Internet GATEWAY
-resource "aws_internet_gateway" "igw-biviholding" {
-  vpc_id = aws_vpc.biviholding.id
-
-  tags = {
-    Name     = "igw-biviholding"
-    NameArea = "Infra"
-  }
-}
-
-
 #####Subnet Public PROD
 
 #SUBNET PROD-PUB-D
@@ -210,9 +199,9 @@ resource "aws_subnet" "HML-PRV-B" {
 #####Subnet Private HML
 #SUBNET HML-PRV-C
 resource "aws_subnet" "HML-PRV-C" {
-  vpc_id                  = aws_vpc.biviholding.id
-  cidr_block              = var.HML-PRV-C
-  availability_zone       = "us-east-1c"
+  vpc_id            = aws_vpc.biviholding.id
+  cidr_block        = var.HML-PRV-C
+  availability_zone = "us-east-1c"
   #map_public_ip_on_launch = false
 
   tags = {
@@ -221,6 +210,15 @@ resource "aws_subnet" "HML-PRV-C" {
   }
 }
 
+#Internet GATEWAY
+resource "aws_internet_gateway" "igw-biviholding" {
+  vpc_id = aws_vpc.biviholding.id
+
+  tags = {
+    Name     = "igw-biviholding"
+    NameArea = "Infra"
+  }
+}
 
 #Elastic IP Nat Gateway
 resource "aws_eip" "Nat_biviholding" {
