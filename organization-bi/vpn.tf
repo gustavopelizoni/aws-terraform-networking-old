@@ -19,10 +19,6 @@ resource "aws_vpn_gateway" "Oracle" {
 }
 
 ## site to site Oracle
-resource "aws_vpc" "Oracle" {
-  cidr_block = "10.251.0.0/17"
-}
-
 resource "aws_vpn_connection" "Oracle" {
   vpn_gateway_id      = aws_vpn_gateway.Oracle.id
   customer_gateway_id = aws_customer_gateway.Oracle.id
