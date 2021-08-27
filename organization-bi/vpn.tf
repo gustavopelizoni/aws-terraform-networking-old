@@ -30,12 +30,13 @@ resource "aws_vpn_connection" "Oracle" {
   #vpc_subnet_route_table_id   = "rtb-0e0d348cfee9eea8c"
   #destination_cidr_block   = "172.31.0.0/24"
   ##static route site to site
-  resource "aws_vpn_connection_route" "Oracle" {
-    destination_cidr_block = "172.31.0.0/24"
-    vpn_connection_id      = aws_vpn_connection.Oracle.id
-  }
 
   tags = {
     "Name" = "Oracle"
   }
+}
+
+resource "aws_vpn_connection_route" "Oracle" {
+  destination_cidr_block = "172.31.0.0/24"
+  vpn_connection_id      = aws_vpn_connection.Oracle.id
 }
