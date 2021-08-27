@@ -30,6 +30,7 @@ resource "aws_vpn_connection" "Oracle" {
   #vpc_subnet_route_table_id   = "rtb-0e0d348cfee9eea8c"
   aws_vpn_connection_route = "rtb-0e0d348cfee9eea8c"
   destination_cidr_block   = "172.31.0.0/24"
+  vpn_connection_id       = aws_vpn_connection_route
   tags = {
     "Name" = "Oracle"
   }
