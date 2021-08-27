@@ -34,6 +34,6 @@ resource "aws_vpn_connection" "Oracle" {
 }
 
 resource "aws_vpn_connection_route" "Oracle" {
-  destination_cidr_block = "172.31.0.0/24"
+  destination_cidr_block = "172.31.0.0/24,192.168.0.0/24,172.30.120.0/23,172.30.110.0/23"
   vpn_connection_id      = aws_vpn_connection.Oracle.id
 }
