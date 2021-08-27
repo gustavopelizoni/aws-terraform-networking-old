@@ -13,7 +13,7 @@ resource "aws_customer_gateway" "Oracle" {
 #customer gateway
 resource "aws_customer_gateway" "OracleCloud" {
   bgp_asn    = 65000
- ip_address = "168.138.242.131" #ip gateway oracle cloud
+ ip_address = "168.138.236.98" #ip gateway oracle cloud
   type       = "ipsec.1"
 
   tags = {
