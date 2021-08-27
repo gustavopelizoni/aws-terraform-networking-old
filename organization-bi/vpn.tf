@@ -13,7 +13,7 @@ resource "aws_customer_gateway" "Oracle" {
 #customer gateway
 resource "aws_customer_gateway" "OracleCloud" {
   bgp_asn    = 65000
-  ip_address = "168.138.236.98" #ip gateway oracle cloud
+ ip_address = "168.138.242.131" #ip gateway oracle cloud
   type       = "ipsec.1"
 
   tags = {
@@ -34,7 +34,7 @@ resource "aws_vpn_gateway" "Oracle" {
 ## site to site Oracle
 resource "aws_vpn_connection" "Oracle" {
   vpn_gateway_id      = aws_vpn_gateway.Oracle.id
-  customer_gateway_id = aws_customer_gateway.Oracle.id
+  customer_gateway_id = aws_customer_gateway.OracleCloud.id
   type                = "ipsec.1"
   static_routes_only  = true
   #tunnel1_inside_cidr = "0.0.0.0/0"
