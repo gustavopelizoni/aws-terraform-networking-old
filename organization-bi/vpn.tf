@@ -22,6 +22,20 @@ resource "aws_customer_gateway" "OracleCloud" {
   }
 }
 
+#customer gateway
+resource "aws_customer_gateway" "OracleCloudNovo" {
+  bgp_asn    = 65000
+ ip_address = "168.138.243.143" #ip gateway oracle cloud
+  type       = "ipsec.1"
+
+  tags = {
+    Name = "OracleCloudNovo"
+
+  }
+}
+
+
+
 #Virtual private gateway
 resource "aws_vpn_gateway" "Oracle" {
   vpc_id = aws_vpc.biviholding.id
