@@ -1,27 +1,27 @@
 #customer gateway
-resource "aws_customer_gateway" "Oracle" {
+resource "aws_customer_gateway" "OracleCloud" {
   bgp_asn    = 65000
   ip_address = "168.138.251.95" #ip gateway oracle cloud
   type       = "ipsec.1"
 
   tags = {
-    Name = "Oracle"
+    Name = "OracleCloud"
   }
 }
 
 #Virtual private gateway
-resource "aws_vpn_gateway" "Oracle" {
+resource "aws_vpn_gateway" "OracleCloud" {
   vpc_id = aws_vpc.biviholding.id
 
   tags = {
-    Name = "Oracle"
+    Name = "OracleCloud"
   }
 }
 
 ## site to site Oracle
-resource "aws_vpn_connection" "Oracle" {
-  vpn_gateway_id      = aws_vpn_gateway.Oracle.id
-  customer_gateway_id = aws_customer_gateway.Oracle.id
+resource "aws_vpn_connection" "OracleCloud" {
+  vpn_gateway_id      = aws_vpn_gateway.OracleCloud.id
+  customer_gateway_id = aws_customer_gateway.OracleCloud.id
   type                = "ipsec.1"
   static_routes_only  = true
   #tunnel1_inside_cidr = "0.0.0.0/0"
@@ -32,11 +32,11 @@ resource "aws_vpn_connection" "Oracle" {
   ##static route site to site
 
   tags = {
-    "Name" = "Oracle"
+    "Name" = "OracleCloud"
   }
 }
 
-resource "aws_vpn_connection_route" "Oracle" {
+resource "aws_vpn_connection_route" "OracleCloud" {
   destination_cidr_block = "172.31.0.0/24"
-  vpn_connection_id      = aws_vpn_connection.Oracle.id
+  vpn_connection_id      = aws_vpn_connection.OracleCloud.id
 }
