@@ -28,10 +28,14 @@ resource "aws_vpn_connection" "Oracle" {
   tunnel1_preshared_key = "F23m732vhFwpWVgEt5gOh4JzN4jPvHiZfh1oE7Gzo2PeBPu29fljvVQZVqiqlZ0o"
   #vpc_subnet_route_table_count = 1
   #vpc_subnet_route_table_id   = "rtb-0e0d348cfee9eea8c"
-  aws_vpn_connection_route = "rtb-0e0d348cfee9eea8c"
-  destination_cidr_block   = "172.31.0.0/24"
-  vpn_connection_id       = aws_vpn_connection_route
+  #destination_cidr_block   = "172.31.0.0/24"
   tags = {
     "Name" = "Oracle"
   }
+}
+
+
+resource "aws_vpn_connection_route" "Oracle" {
+  destination_cidr_block = "172.31.0.0/24"
+  vpn_connection_id      = aws_vpn_connection.Oracle.id
 }
