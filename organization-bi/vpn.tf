@@ -10,6 +10,18 @@ resource "aws_customer_gateway" "Oracle" {
   }
 }
 
+#customer gateway
+resource "aws_customer_gateway" "OracleCloud" {
+  bgp_asn    = 65000
+  ip_address = "35.173.147.143" #ip gateway oracle cloud
+  type       = "ipsec.1"
+
+  tags = {
+    Name = "Oracle"
+
+  }
+}
+
 #Virtual private gateway
 resource "aws_vpn_gateway" "Oracle" {
   vpc_id = aws_vpc.biviholding.id
@@ -34,6 +46,6 @@ resource "aws_vpn_connection" "Oracle" {
 }
 
 resource "aws_vpn_connection_route" "Oracle" {
-  destination_cidr_block = "0.0.0.0/0"
+  destination_cidr_block = "172.31.0.0/24"
   vpn_connection_id      = aws_vpn_connection.Oracle.id
 }

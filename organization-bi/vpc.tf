@@ -293,7 +293,7 @@ resource "aws_route_table" "rt-biviholding-private" {
   vpc_id = aws_vpc.biviholding.id
 
   route {
-    cidr_block = "0.0.0.0/0"
+    cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.nat-gw-biviholding.id
   }
 
