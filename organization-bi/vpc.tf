@@ -287,10 +287,18 @@ resource "aws_route_table" "rt-biviholding-public" {
     gateway_id = aws_vpn_gateway.OracleCloud.id
     #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
   }
-  #route {
-  #    cidr_block = "172.31.0.0/24"
-  #    gateway_id = aws_vpn_gateway.OracleCloud.id
-  #  }
+
+  route {
+    cidr_block = "172.30.110.0/23"
+    gateway_id = aws_vpn_gateway.OracleCloud.id
+    #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
+  }
+
+  route {
+    cidr_block = "172.30.120.0/23"
+    gateway_id = aws_vpn_gateway.OracleCloud.id
+    #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
+  }
 
 
   tags = {
