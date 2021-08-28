@@ -1,16 +1,16 @@
 #customer gateway
-resource "aws_customer_gateway" "OracleCloud" {
-  bgp_asn    = 65000
-  ip_address = "168.138.236.98" #ip gateway oracle cloud
-  type       = "ipsec.1"
+#resource "aws_customer_gateway" "OracleCloud" {
+#  bgp_asn    = 65000
+#  ip_address = "168.138.236.98" #ip gateway oracle cloud
+#  type       = "ipsec.1"
 
-  tags = {
-    Name = "OracleCloud"
+# tags = {
+#   Name = "OracleCloud"
 
-  }
-}
+# }
+#}
 
-#customer gateway 2
+#customer gateway tunnel1
 resource "aws_customer_gateway" "Oracle-Cloud" {
   bgp_asn    = 65000
   ip_address = "168.138.234.215" #ip gateway oracle cloud
@@ -27,7 +27,7 @@ resource "aws_vpn_gateway" "OracleCloud" {
   vpc_id = aws_vpc.biviholding.id
 
   tags = {
-   Name = "OracleCloud"
+    Name = "OracleCloud"
   }
 }
 
