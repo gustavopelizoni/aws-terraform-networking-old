@@ -111,14 +111,7 @@ variable "HML-PRV-C" {
 }
 
 
-#### VPN Conection Oracle
-
-#variable "vpc-biviholding" {
-#  type        = string
-#  description = "The ID of the VPC to which the Virtual Private Gateway will be attached"
-#}
-#Module      : LABEL
-#Description : Terraform label module variables.
+#### VPN Conection Oracle tunnel1_preshared_key
 variable "tunnel1_preshared_key" {
   default     = "7wrtqrh5HBZHD0LyXaPamWzCQt2q74lqH8UCEpz8qcIFWcv7af4DLDE8opAy29xQ"
   description = "Chave tunnel1"
