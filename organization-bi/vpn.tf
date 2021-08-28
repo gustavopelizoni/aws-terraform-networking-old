@@ -1,16 +1,4 @@
-#customer gateway
-#resource "aws_customer_gateway" "OracleCloud" {
-#  bgp_asn    = 65000
-#  ip_address = "168.138.236.98" #ip gateway oracle cloud
-#  type       = "ipsec.1"
-
-# tags = {
-#   Name = "OracleCloud"
-
-# }
-#}
-
-#customer gateway tunnel1
+#customer gateway tunnel
 resource "aws_customer_gateway" "Oracle-Cloud" {
   bgp_asn    = 65000
   ip_address = "168.138.234.215" #ip gateway oracle cloud
@@ -38,7 +26,7 @@ resource "aws_vpn_connection" "OracleCloud" {
   type                = "ipsec.1"
   static_routes_only  = true
   #tunnel1_inside_cidr = "0.0.0.0/0"
-  tunnel1_preshared_key = "7wrtqrh5HBZHD0LyXaPamWzCQt2q74lqH8UCEpz8qcIFWcv7af4DLDE8opAy29xQ"
+  tunnel1_preshared_key = var.tunnel1_preshared_key.id
 
   tags = {
     "Name" = "OracleCloud"

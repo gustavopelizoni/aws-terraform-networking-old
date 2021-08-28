@@ -119,3 +119,8 @@ variable "HML-PRV-C" {
 #}
 #Module      : LABEL
 #Description : Terraform label module variables.
+variable "tunnel1_preshared_key" {
+  default     = "7wrtqrh5HBZHD0LyXaPamWzCQt2q74lqH8UCEpz8qcIFWcv7af4DLDE8opAy29xQ"
+  description = "Chave tunnel1"
+  type        = string
+}
