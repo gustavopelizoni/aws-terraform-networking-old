@@ -34,7 +34,7 @@ resource "aws_vpn_gateway" "OracleCloud" {
 ## site to site Oracle
 resource "aws_vpn_connection" "OracleCloud" {
   vpn_gateway_id      = aws_vpn_gateway.OracleCloud.id
-  customer_gateway_id = aws_customer_gateway.OracleCloud.id
+  customer_gateway_id = aws_customer_gateway.Oracle-Cloud.id
   type                = "ipsec.1"
   static_routes_only  = true
   #tunnel1_inside_cidr = "0.0.0.0/0"
