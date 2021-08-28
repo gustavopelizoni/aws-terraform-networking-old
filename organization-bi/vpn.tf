@@ -15,7 +15,7 @@ resource "aws_vpn_gateway" "OracleCloud" {
   vpc_id = aws_vpc.biviholding.id
 
   tags = {
-    Name = "OracleCloud"
+   Name = "OracleCloud"
   }
 }
 
