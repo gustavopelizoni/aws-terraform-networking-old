@@ -26,7 +26,7 @@ resource "aws_vpn_connection" "OracleCloud" {
   type                = "ipsec.1"
   static_routes_only  = true
   #tunnel1_inside_cidr = "0.0.0.0/0"
-  tunnel1_preshared_key = var.tunnel1_preshared_key.id
+  tunnel1_preshared_key = var.tunnel1_preshared_key
 
   tags = {
     "Name" = "OracleCloud"
