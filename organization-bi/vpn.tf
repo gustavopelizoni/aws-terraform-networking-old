@@ -25,7 +25,6 @@ resource "aws_vpn_connection" "OracleCloud" {
   customer_gateway_id = aws_customer_gateway.Oracle-Cloud.id
   type                = "ipsec.1"
   static_routes_only  = true
-  #tunnel1_inside_cidr = "0.0.0.0/0"
   tunnel1_preshared_key = var.tunnel1_preshared_key
 
   tags = {
@@ -33,6 +32,7 @@ resource "aws_vpn_connection" "OracleCloud" {
   }
 }
 
+##Conexao VPN
 resource "aws_vpn_connection_route" "Oracle" {
   destination_cidr_block = "172.31.0.0/24"
   vpn_connection_id      = aws_vpn_connection.OracleCloud.id
