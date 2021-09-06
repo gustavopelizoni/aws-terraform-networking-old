@@ -5,7 +5,6 @@ resource "aws_vpc" "biviholding-inovacao" {
   instance_tenancy     = "default"
   enable_dns_hostnames = true
 
-
   tags = {
     Name : "biviholding-inovacao"
     NameArea : "Infra"
@@ -13,13 +12,6 @@ resource "aws_vpc" "biviholding-inovacao" {
   }
 }
 
-resource "aws_default_vpc" "biviholding-inovacao" {
-  tags = {
-    Name : "biviholding-inovacao"
-    NameArea : "Infra"
-    NameVPC : "biviholding-inovacao"
-  }
-}
 
 #####Subnet Public PROD
 
@@ -361,15 +353,15 @@ resource "aws_route_table" "rt-biviholding-inovacao-public" {
 #}
 
 #### Subnet DEV PUB
-resource "aws_route_table_association" "rt-dev-pub-d-inovacao" {
-  subnet_id      = aws_subnet.DEV-PUB-D-inovacao.id
-  route_table_id = aws_route_table.rt-biviholding-inovacao-public.id
-}
+#resource "aws_route_table_association" "rt-dev-pub-d-inovacao" {
+#  subnet_id      = aws_subnet.DEV-PUB-D-inovacao.id
+#  route_table_id = aws_route_table.rt-biviholding-inovacao-public.id
+#}
 
-resource "aws_route_table_association" "rt-dev-pub-e-inovacao" {
-  subnet_id      = aws_subnet.DEV-PUB-E-inovacao.id
-  route_table_id = aws_route_table.rt-biviholding-inovacao-public.id
-}
+#resource "aws_route_table_association" "rt-dev-pub-e-inovacao" {
+#  subnet_id      = aws_subnet.DEV-PUB-E-inovacao.id
+#  route_table_id = aws_route_table.rt-biviholding-inovacao-public.id
+#}
 
 # terraform aws associate subnet with route table PRIVATE
 #### Subnet HML PRIVATE

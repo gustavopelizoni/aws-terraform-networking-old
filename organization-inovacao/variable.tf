@@ -6,9 +6,9 @@ variable "region" {
 }
 
 variable "vpc-biviholding-inovacao" {
-  default     = "10.252.0.0/17"
-  description = "VPC CIDR Block"
-  type        = string
+  default            = "10.252.0.0/17"
+  description        = "VPC CIDR Block"
+  type               = string
 }
 
 
