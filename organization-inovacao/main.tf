@@ -18,7 +18,7 @@ terraform {
     organization = "Almee"
 
     workspaces {
-      name = "aws-terraform-networking-innovacao"
+      name = "aws-terraform-networking-inovacao"
     }
   }
 }
