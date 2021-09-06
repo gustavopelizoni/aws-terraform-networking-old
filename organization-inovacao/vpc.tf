@@ -5,6 +5,7 @@ resource "aws_vpc" "biviholding-inovacao" {
   instance_tenancy     = "default"
   enable_dns_hostnames = true
 
+
   tags = {
     Name : "biviholding-inovacao"
     NameArea : "Infra"
@@ -141,10 +142,10 @@ resource "aws_subnet" "DEV-PUB-E-inovacao" {
 #  map_public_ip_on_launch = false
 
 
- # tags = {
- #   Name     = "PROD-PRV-A"
- #   NameArea = "Infra"
- # }
+# tags = {
+#   Name     = "PROD-PRV-A"
+#   NameArea = "Infra"
+# }
 #}
 
 #SUBNET PROD-PRV-B
@@ -154,10 +155,10 @@ resource "aws_subnet" "DEV-PUB-E-inovacao" {
 #  availability_zone       = "us-east-1b"
 #  map_public_ip_on_launch = false
 
- # tags = {
- #   Name     = "PROD-PRV-B"
- #   NameArea = "Infra"
- # }
+# tags = {
+#   Name     = "PROD-PRV-B"
+#   NameArea = "Infra"
+# }
 #}
 
 #SUBNET PROD-PRV-C
@@ -209,7 +210,7 @@ resource "aws_subnet" "DEV-PUB-E-inovacao" {
 #  vpc_id            = aws_vpc.biviholding.id
 #  cidr_block        = var.HML-PRV-C
 #  availability_zone = "us-east-1c"
-  #map_public_ip_on_launch = false
+#map_public_ip_on_launch = false
 
 #  tags = {
 #    Name     = "HML-PRV-C"
@@ -234,11 +235,11 @@ resource "aws_internet_gateway" "igw-biviholding-inovacao" {
 #    aws_internet_gateway.igw-biviholding-inovacao
 #  ]
 
- # tags = {
- #   Name          = "Nat_biviholding-inovacao"
- #   NameArea      = "Infra"
- #   NameElasticIP = "NameElasticIP"
- # }
+# tags = {
+#   Name          = "Nat_biviholding-inovacao"
+#   NameArea      = "Infra"
+#   NameElasticIP = "NameElasticIP"
+# }
 #}
 
 #Nat Gateway
@@ -292,8 +293,8 @@ resource "aws_route_table" "rt-biviholding-inovacao-public" {
   #route {
   #  cidr_block = "172.31.0.0/24"
   #  gateway_id = aws_vpn_gateway.OracleCloud.id
-    #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
-#}
+  #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
+  #}
 
   tags = {
     NameArea = "Infra"
@@ -313,7 +314,7 @@ resource "aws_route_table" "rt-biviholding-inovacao-public" {
 #  route {
 #    cidr_block = "172.31.0.0/24"
 #    gateway_id = aws_vpn_gateway.OracleCloud.id
-    #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
+#gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
 #  }
 #  tags = {
 #    NameArea = "Infra"
@@ -339,8 +340,8 @@ resource "aws_route_table" "rt-biviholding-inovacao-public" {
 #}
 
 ##resource "aws_route_table_association" "rt-prod-pub-d" {
- # subnet_id      = aws_subnet.PROD-PUB-D.id
- # route_table_id = aws_route_table.rt-biviholding-public.id
+# subnet_id      = aws_subnet.PROD-PUB-D.id
+# route_table_id = aws_route_table.rt-biviholding-public.id
 #}
 
 #resource "aws_route_table_association" "rt-prod-pub-e" {
@@ -374,7 +375,7 @@ resource "aws_route_table_association" "rt-dev-pub-e-inovacao" {
 #### Subnet HML PRIVATE
 #resource "aws_route_table_association" "rt-hml-prv-a" {
 ##  subnet_id      = aws_subnet.HML-PRV-A.id
- # route_table_id = aws_route_table.rt-biviholding-private.id
+# route_table_id = aws_route_table.rt-biviholding-private.id
 #}
 
 #resource "aws_route_table_association" "rt-hml-prv-b" {
