@@ -1,7 +1,17 @@
+
+
 #VPC biviholding
 resource "aws_vpc" "biviholding" {
   cidr_block = "10.250.0.0/17"
 
+  tags = {
+    Name : "biviholding"
+    NameArea : "Infra"
+    NameVPC : "biviholding"
+  }
+}
+
+resource "aws_default_vpc" "biviholding" {
   tags = {
     Name : "biviholding"
     NameArea : "Infra"
