@@ -11,4 +11,4 @@ Repositório utilizado para criacao e configuracao dos seguintes servicos/recurs
 •   VPN Site to Site - Azure | Oracle | Civitas 
 
 
-Cada pasta é seguimentada por organizacoes da AWS;
+Cada Diretório é seguimentada por organizacoes da AWS;
