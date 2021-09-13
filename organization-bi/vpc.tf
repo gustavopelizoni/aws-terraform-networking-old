@@ -313,6 +313,8 @@ resource "aws_route_table" "rt-biviholding-private" {
     Name     = "rt-biviholding-private"
   }
 }
+
+
 # terraform aws associate subnet with route table PUBLIC
 
 #### Subnet PROD PUB 
