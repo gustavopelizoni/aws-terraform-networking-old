@@ -315,6 +315,8 @@ resource "aws_route_table" "rt-biviholding-private" {
 }
 
 
+#route table default VPC
+
 # terraform aws associate subnet with route table PUBLIC
 
 #### Subnet PROD PUB 
