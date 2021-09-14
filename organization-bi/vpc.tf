@@ -182,7 +182,6 @@ resource "aws_subnet" "HML-PRV-A" {
   }
 }
 
-#####Subnet Private HML
 #SUBNET HML-PRV-B
 resource "aws_subnet" "HML-PRV-B" {
   vpc_id                  = aws_vpc.biviholding.id
@@ -196,7 +195,6 @@ resource "aws_subnet" "HML-PRV-B" {
   }
 }
 
-#####Subnet Private HML
 #SUBNET HML-PRV-C
 resource "aws_subnet" "HML-PRV-C" {
   vpc_id            = aws_vpc.biviholding.id
