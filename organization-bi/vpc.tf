@@ -393,7 +393,7 @@ resource "aws_route_table_association" "rt-prod-prv-b" {
   route_table_id = aws_route_table.rt-biviholding-private.id
 }
 
-#resource "aws_route_table_association" "rt-prod-prv-c" {
-#  subnet_id      = aws_subnet.PROD-PRV-C.id
-#  route_table_id = aws_route_table.rt-biviholding-private.id
-#}
+resource "aws_route_table_association" "rt-prod-prv-c" {
+  subnet_id      = aws_subnet.PROD-PRV-C.id
+  route_table_id = aws_route_table.rt-biviholding-private.id
+}
