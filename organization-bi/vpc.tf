@@ -284,7 +284,7 @@ resource "aws_route_table" "rt-biviholding-public" {
   ##  cidr_block = "172.31.0.0/24"
   ##  gateway_id = aws_vpn_gateway.OracleCloud.id
     #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
-  }
+  ##}
 
   tags = {
     NameArea = "Infra"
@@ -305,7 +305,7 @@ resource "aws_route_table" "rt-biviholding-private" {
   ##  cidr_block = "172.31.0.0/24"
   ##  gateway_id = aws_vpn_gateway.OracleCloud.id
     #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
-  }
+  ##}
   tags = {
     NameArea = "Infra"
     Name     = "rt-biviholding-private"
