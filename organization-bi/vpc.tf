@@ -301,7 +301,7 @@ resource "aws_route_table" "rt-biviholding-private" {
     nat_gateway_id = aws_nat_gateway.nat-gw-biviholding.id
   }
 
-  ##route {
+  route {
     cidr_block = "172.31.0.0/24"
     gateway_id = aws_vpn_gateway.OracleCloud.id
     #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
@@ -311,13 +311,9 @@ resource "aws_route_table" "rt-biviholding-private" {
     Name     = "rt-biviholding-private"
   }
 }
-
-
 #route table default VPC
-
-# terraform aws associate subnet with route table PUBLIC
-
-#### Subnet PROD PUB 
+#terraform aws associate subnet with route table PUBLIC
+## Subnet PROD PUB 
 resource "aws_route_table_association" "rt-prod-pub-a" {
   subnet_id      = aws_subnet.PROD-PUB-A.id
   route_table_id = aws_route_table.rt-biviholding-public.id
