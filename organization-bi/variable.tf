@@ -111,9 +111,16 @@ variable "HML-PRV-C" {
 }
 
 
-## VPN Conection Oracle tunnel1_preshared_key
-variable "tunnel1_preshared_key" {
-  default     = "7wrtqrh5HBZHD0LyXaPamWzCQt2q74lqH8UCEpz8qcIFWcv7af4DLDE8opAy29xQ"
-  description = "Chave tunnel1"
+variable "peer_owner_id" {
+  default     = "667460020190"
+  description = "Prod"
   type        = string
+
 }
+
+## VPN Conection Oracle tunnel1_preshared_key
+##variable "tunnel1_preshared_key" {
+##  default     = "7wrtqrh5HBZHD0LyXaPamWzCQt2q74lqH8UCEpz8qcIFWcv7af4DLDE8opAy29xQ"
+##  description = "Chave tunnel1"
+##  type        = string
+##}

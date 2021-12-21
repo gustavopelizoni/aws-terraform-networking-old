@@ -280,11 +280,11 @@ resource "aws_route_table" "rt-biviholding-public" {
     gateway_id = aws_internet_gateway.igw-biviholding.id
   }
 
-  route {
-    cidr_block = "172.31.0.0/24"
-    gateway_id = aws_vpn_gateway.OracleCloud.id
-    #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
-  }
+  ##route {
+  ##  cidr_block = "172.31.0.0/24"
+  ##  gateway_id = aws_vpn_gateway.OracleCloud.id
+  #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
+  ##}
 
   tags = {
     NameArea = "Infra"
@@ -301,11 +301,11 @@ resource "aws_route_table" "rt-biviholding-private" {
     nat_gateway_id = aws_nat_gateway.nat-gw-biviholding.id
   }
 
-  route {
-    cidr_block = "172.31.0.0/24"
-    gateway_id = aws_vpn_gateway.OracleCloud.id
-    #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
-  }
+  ##route {
+  ##  cidr_block = "172.31.0.0/24"
+  ##  gateway_id = aws_vpn_gateway.OracleCloud.id
+  #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
+  ##}
   tags = {
     NameArea = "Infra"
     Name     = "rt-biviholding-private"
