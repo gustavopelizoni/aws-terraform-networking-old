@@ -6,8 +6,8 @@ resource "aws_vpc_peering_connection" "biviholding" {
 
 resource "aws_vpc" "biviholding-RAIZ" {
   cidr_block = "10.250.0.0/17"
-  default = "vpc-0d51056d1c87cd1c2"
-  
+
+
 
 }
 
