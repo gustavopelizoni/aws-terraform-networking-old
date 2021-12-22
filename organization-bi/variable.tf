@@ -110,27 +110,6 @@ variable "HML-PRV-C" {
   type        = string
 }
 
-
-## Variáveis para peering AWS BI com Conta raiz Biviholding
-##variable "owner_profile" {
-##  description = "AWS Profile"
-##  default     = "default"
-##}
-
-##variable "accepter_profile" {
-##  description = "AWS Profile"
-##  default     = "667460020190"
-##}
-
-##variable "owner_vpc_id" {
-##  description = "Owner VPC Id"
-##}
-
-##variable "accepter_vpc_id" {
-##  description = "Accepter VPC Id"
-##}
-
-
 ## VPN Conection Oracle tunnel1_preshared_key
 ##variable "tunnel1_preshared_key" {
 ##  default     = "7wrtqrh5HBZHD0LyXaPamWzCQt2q74lqH8UCEpz8qcIFWcv7af4DLDE8opAy29xQ"
