@@ -11,6 +11,21 @@ variable "vpc-biviholding" {
   type        = string
 }
 
+#Rotas VPN
+variable "oracle-cloud" {
+  default     = "172.31.0.0/24"
+  description = "Rota para Oracle"
+  type        = string
+
+}
+
+
+variable "transit-gateway" {
+  default     = "tgw-064553bc11fb48e83"
+  description = "gateway biviholding"
+  type        = string
+
+}
 
 #####Subnet Public PRD
 variable "PROD-PUB-A" {
@@ -108,6 +123,13 @@ variable "HML-PRV-C" {
   default     = "10.251.56.0/21"
   description = "Hml"
   type        = string
+}
+
+variable "Oracle-Cloud" {
+  default     = "172.31.0.0/24"
+  description = "Rota para Oracle"
+  type        = string
+
 }
 
 ## VPN Conection Oracle tunnel1_preshared_key

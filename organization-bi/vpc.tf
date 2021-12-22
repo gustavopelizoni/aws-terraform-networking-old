@@ -280,6 +280,12 @@ resource "aws_route_table" "rt-biviholding-public" {
     gateway_id = aws_internet_gateway.igw-biviholding.id
   }
 
+  route {
+    cidr_block         = var.oracle-cloud
+    transit_gateway_id = var.transit-gateway
+    #gateway_id         = aws_internet_gateway.igw-biviholding.id
+  }
+
   ##route {
   ##  cidr_block = "172.31.0.0/24"
   ##  gateway_id = aws_vpn_gateway.OracleCloud.id
@@ -349,6 +355,7 @@ resource "aws_route_table_association" "rt-hml-pub-e" {
   subnet_id      = aws_subnet.HML-PUB-E.id
   route_table_id = aws_route_table.rt-biviholding-public.id
 }
+
 
 #### Subnet DEV PUB
 resource "aws_route_table_association" "rt-dev-pub-d" {
