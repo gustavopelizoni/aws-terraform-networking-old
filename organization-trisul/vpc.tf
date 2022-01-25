@@ -89,7 +89,8 @@ resource "aws_security_group" "sg-vpc-trisul" {
 
 #Route table default
 resource "aws_default_route_table" "rt-trisul" {
-  vpc_id = aws_vpc.trisul.id
+  default_route_table_id = aws_vpc.trisul.id
+  #vpc_id = aws_vpc.trisul.id
 
   route {
     cidr_block = "0.0.0.0/0"
