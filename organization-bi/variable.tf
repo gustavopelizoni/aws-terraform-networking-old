@@ -20,12 +20,12 @@ variable "oracle-cloud" {
 }
 
 
-variable "transit-gateway" {
-  default     = "tgw-064553bc11fb48e83"
-  description = "gateway biviholding"
-  type        = string
+#variable "transit-gateway" {
+#  default     = "tgw-064553bc11fb48e83"
+#  description = "gateway biviholding"
+#  type        = string
 
-}
+#}
 
 #####Subnet Public PRD
 variable "PROD-PUB-A" {
