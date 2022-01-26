@@ -390,3 +390,83 @@ resource "aws_route_table_association" "rt-prod-pub-e" {
   subnet_id      = aws_subnet.PROD-PUB-E.id
   route_table_id = aws_route_table.rt-trisul-public.id
 }
+
+#### Subnet DEV PUB
+resource "aws_route_table_association" "rt-dev-pub-c" {
+  subnet_id      = aws_subnet.DEV-PUB-C.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+resource "aws_route_table_association" "rt-dev-pub-d" {
+  subnet_id      = aws_subnet.DEV-PUB-D.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+resource "aws_route_table_association" "rt-dev-pub-e" {
+  subnet_id      = aws_subnet.DEV-PUB-E.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+#### Subnet HML PUB
+resource "aws_route_table_association" "rt-hml-pub-c" {
+  subnet_id      = aws_subnet.DEV-HML-C.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+resource "aws_route_table_association" "rt-hml-pub-d" {
+  subnet_id      = aws_subnet.HML-PUB-D.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+resource "aws_route_table_association" "rt-hml-pub-e" {
+  subnet_id      = aws_subnet.HML-PUB-E.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+#### Subnet HML PRIVATE
+resource "aws_route_table_association" "rt-hml-prv-a" {
+  subnet_id      = aws_subnet.HML-PRV-A.id
+  route_table_id = aws_route_table.rt-trisul-private.id
+}
+
+resource "aws_route_table_association" "rt-hml-prv-b" {
+  subnet_id      = aws_subnet.HML-PRV-B.id
+  route_table_id = aws_route_table.rt-trisul-private.id
+}
+
+resource "aws_route_table_association" "rt-hml-prv-c" {
+  subnet_id      = aws_subnet.HML-PRV-C.id
+  route_table_id = aws_route_table.rt-trisul-private.id
+}
+
+#### Subnet DEV PRIVATE
+resource "aws_route_table_association" "rt-dev-prv-a" {
+  subnet_id      = aws_subnet.DEV-PRV-A.id
+  route_table_id = aws_route_table.rt-trisul-private.id
+}
+
+resource "aws_route_table_association" "rt-dev-prv-b" {
+  subnet_id      = aws_subnet.DEV-PRV-A.id
+  route_table_id = aws_route_table.rt-trisul-private.id
+}
+
+resource "aws_route_table_association" "rt-dev-prv-c" {
+  subnet_id      = aws_subnet.DEV-PRV-C.id
+  route_table_id = aws_route_table.rt-trisul-private.id
+}
+
+#### Subnet PROD PRIVATE
+resource "aws_route_table_association" "rt-prod-prv-a" {
+  subnet_id      = aws_subnet.PROD-PRV-A.id
+  route_table_id = aws_route_table.rt-trisul-private.id
+}
+
+resource "aws_route_table_association" "rt-prod-prv-b" {
+  subnet_id      = aws_subnet.PROD-PRV-B.id
+  route_table_id = aws_route_table.rt-trisul-private.id
+}
+
+resource "aws_route_table_association" "rt-prod-prv-c" {
+  subnet_id      = aws_subnet.PROD-PRV-C.id
+  route_table_id = aws_route_table.rt-trisul-private.id
+}
