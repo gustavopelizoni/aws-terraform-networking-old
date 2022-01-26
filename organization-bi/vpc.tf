@@ -307,9 +307,9 @@ resource "aws_route_table" "rt-biviholding-private" {
     nat_gateway_id = aws_nat_gateway.nat-gw-biviholding.id
   }
 
-  route {
+  #route {
     cidr_block         = var.oracle-cloud
-    transit_gateway_id = var.transit-gateway
+  #  transit_gateway_id = var.transit-gateway
     #gateway_id         = aws_internet_gateway.igw-biviholding.id
   }
 
