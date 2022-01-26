@@ -49,6 +49,30 @@ resource "aws_subnet" "PROD-PUB-C" {
   }
 }
 
+#SUBNET PROD-PUB-D
+resource "aws_subnet" "PROD-PUB-D" {
+  vpc_id            = aws_vpc.trisul.id
+  cidr_block        = var.PROD-PUB-D
+  availability_zone = "us-east-1d"
+
+  tags = {
+    Name     = "PROD-PUB-D"
+    NameArea = "Infra"
+  }
+}
+
+#SUBNET PROD-PUB-E
+resource "aws_subnet" "PROD-PUB-E" {
+  vpc_id            = aws_vpc.trisul.id
+  cidr_block        = var.PROD-PUB-E
+  availability_zone = "us-east-1e"
+
+  tags = {
+    Name     = "PROD-PUB-E"
+    NameArea = "Infra"
+  }
+}
+
 #Internet GATEWAY
 resource "aws_internet_gateway" "igw-trisul" {
   vpc_id = aws_vpc.trisul.id
@@ -57,6 +81,33 @@ resource "aws_internet_gateway" "igw-trisul" {
     Name     = "igw-trisul"
     NameArea = "Infra"
   }
+}
+
+#Elastic IP Nat Gateway
+resource "aws_eip" "Nat_trisul" {
+  vpc = true
+  depends_on = [
+    aws_internet_gateway.igw-trisul
+  ]
+
+  tags = {
+    Name          = "Nat_trisul"
+    NameArea      = "Infra"
+    NameElasticIP = "Nat_trisul"
+  }
+}
+
+#Nat Gateway
+resource "aws_nat_gateway" "nat-gw-trisul" {
+  allocation_id = aws_eip.Nat_trisul.id
+  subnet_id     = aws_subnet.PROD-PUB-D.id
+
+  tags = {
+    Name     = "nat-gw-trisul"
+    NameArea = "Infra"
+    NameNat  = "nat-gw-trisul"
+  }
+
 }
 
 #### Grupo de seguranca 
@@ -81,7 +132,7 @@ resource "aws_security_group" "sg-vpc-trisul" {
 
   tags = {
     NameArea = "Infra"
-    Name = "sg-vpc-trisul"
+    Name     = "sg-vpc-trisul"
   }
 }
 
@@ -99,6 +150,6 @@ resource "aws_route_table" "rt-trisul-public" {
 
   tags = {
     NameArea = "Infra"
-    Name     = "rt-trisul"
+    Name     = "rt-trisul-public"
   }
 }

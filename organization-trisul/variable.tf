@@ -30,3 +30,14 @@ variable "PROD-PUB-C" {
   type        = string
 }
 
+variable "PROD-PUB-D" {
+  default     = "10.252.1.128/25"
+  description = "Prod"
+  type        = string
+}
+
+variable "PROD-PUB-E" {
+  default     = "10.252.2.0/25"
+  description = "Prod"
+  type        = string
+}
