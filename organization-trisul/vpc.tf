@@ -333,9 +333,8 @@ resource "aws_security_group" "sg-vpc-trisul" {
 
 
 
-#Route table default
+#Route table public
 resource "aws_route_table" "rt-trisul-public" {
-  #default_route_table_id = aws_vpc.trisul.id
   vpc_id = aws_vpc.trisul.id
 
   route {
@@ -347,4 +346,47 @@ resource "aws_route_table" "rt-trisul-public" {
     NameArea = "Infra"
     Name     = "rt-trisul-public"
   }
+}
+
+#Route table private
+resource "aws_route_table" "rt-trisul-private" {
+  vpc_id = aws_vpc.trisul.id
+
+  route {
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.nat-gw-trisul.id
+  }
+
+  tags = {
+    NameArea = "Infra"
+    Name     = "rt-trisul-private"
+  }
+}
+
+#route table default VPC
+#terraform aws associate subnet with route table PUBLIC
+## Subnet PROD PUB 
+resource "aws_route_table_association" "rt-prod-pub-a" {
+  subnet_id      = aws_subnet.PROD-PUB-A.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+resource "aws_route_table_association" "rt-prod-pub-b" {
+  subnet_id      = aws_subnet.PROD-PUB-B.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+resource "aws_route_table_association" "rt-prod-pub-c" {
+  subnet_id      = aws_subnet.PROD-PUB-C.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+resource "aws_route_table_association" "rt-prod-pub-d" {
+  subnet_id      = aws_subnet.PROD-PUB-D.id
+  route_table_id = aws_route_table.rt-trisul-public.id
+}
+
+resource "aws_route_table_association" "rt-prod-pub-e" {
+  subnet_id      = aws_subnet.PROD-PUB-E.id
+  route_table_id = aws_route_table.rt-trisul-public.id
 }
