@@ -41,3 +41,99 @@ variable "PROD-PUB-E" {
   description = "Prod"
   type        = string
 }
+
+#####Subnet Public DEV
+variable "DEV-PUB-C" {
+  default     = "10.252.9.0/25"
+  description = "Dev"
+  type        = string
+}
+
+variable "DEV-PUB-D" {
+  default     = "10.252.9.128/25"
+  description = "Dev"
+  type        = string
+}
+
+variable "DEV-PUB-E" {
+  default     = "10.252.10.0/25"
+  description = "Dev"
+  type        = string
+}
+
+#####Subnet Public HML
+variable "HML-PUB-C" {
+  default     = "10.252.5.0/25"
+  description = "Hml"
+  type        = string
+}
+
+variable "HML-PUB-D" {
+  default     = "10.252.5.128/25"
+  description = "Hml"
+  type        = string
+}
+
+variable "HML-PUB-E" {
+  default     = "10.252.6.0/25"
+  description = "Hml"
+  type        = string
+}
+
+#####Subnet Private PROD
+variable "PROD-PRV-A" {
+  default     = "10.252.2.128/25"
+  description = "Prod"
+  type        = string
+}
+
+variable "PROD-PRV-B" {
+  default     = "10.252.3.0/25"
+  description = "Prod"
+  type        = string
+}
+
+variable "PROD-PRV-C" {
+  default     = "10.252.3.128/25"
+  description = "Prod"
+  type        = string
+}
+
+#####Subnet Private DEV
+variable "DEV-PRV-A" {
+  default     = "10.252.10.128/25"
+  description = "Hml"
+  type        = string
+}
+
+variable "DEV-PRV-B" {
+  default     = "10.252.11.0/25"
+  description = "Hml"
+  type        = string
+}
+
+variable "DEV-PRV-C" {
+  default     = "10.252.11.128/25"
+  description = "Hml"
+  type        = string
+}
+
+
+#####Subnet Private HML
+variable "HML-PRV-A" {
+  default     = "10.252.6.128/25"
+  description = "Hml"
+  type        = string
+}
+
+variable "HML-PRV-B" {
+  default     = "10.252.7.0/25"
+  description = "Hml"
+  type        = string
+}
+
+variable "HML-PRV-C" {
+  default     = "10.252.7.128/25"
+  description = "Hml"
+  type        = string
+}
