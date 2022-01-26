@@ -409,7 +409,7 @@ resource "aws_route_table_association" "rt-dev-pub-e" {
 
 #### Subnet HML PUB
 resource "aws_route_table_association" "rt-hml-pub-c" {
-  subnet_id      = aws_subnet.DEV-HML-C.id
+  subnet_id      = aws_subnet.HML-PUB-C.id
   route_table_id = aws_route_table.rt-trisul-public.id
 }
 
