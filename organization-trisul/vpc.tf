@@ -61,7 +61,7 @@ resource "aws_internet_gateway" "igw-trisul" {
 
 #### Grupo de seguranca 
 resource "aws_security_group" "sg-vpc-trisul" {
-  name        = "sg-vpc-trisul"
+  name        = "sgvpctrisul"
   description = "Allow sg-vpc-trisul"
   vpc_id      = aws_vpc.trisul.id
 
