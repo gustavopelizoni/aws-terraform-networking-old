@@ -18,7 +18,7 @@ terraform {
     organization = "Almee"
 
     workspaces {
-      name = "aws-terraform-networking-bi"
+      name = "aws-terraform-networking-raiz"
     }
   }
 }
