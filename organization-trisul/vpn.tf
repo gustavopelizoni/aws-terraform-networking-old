@@ -21,9 +21,9 @@ resource "aws_customer_gateway" "cg_trisul" {
   ip_address = "201.31.135.210/28"
   type       = "ipsec.1"
 
-  tags {
-    Name = "trisul-customer-gateway"
-  }
+  #tags {
+  #  Name = "trisul-customer-gateway"
+  #}
 }
 
 #resource "aws_vpc" "vpc" {
