@@ -30,8 +30,8 @@ resource "aws_customer_gateway" "cg_trisul" {
 # ...
 #}
 
-#resource "aws_vpn_gateway" "vg_trisul" {
-#  vpc_id = aws_vpc.trisul.id
+resource "aws_vpn_gateway" "vg_trisul" {
+  vpc_id = aws_vpc.trisul.id
 
   # ...
-#}
+}
