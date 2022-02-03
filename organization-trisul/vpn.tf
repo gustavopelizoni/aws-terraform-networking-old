@@ -2,8 +2,8 @@ module "vpn_gateway" {
   source  = "terraform-aws-modules/vpn-gateway/aws"
   version = "~> 2.0"
 
-  vpn_gateway_id      = aws_vpn_gateway.vpn_gateway.id
-  customer_gateway_id = aws_customer_gateway.main.id
+  vpn_gateway_id      = aws_vpn_gateway.vg_trisul.id
+  customer_gateway_id = aws_customer_gateway.cg_trisul.id
   vpc_id              = aws_vpc.trisul.id
 
   vpc_subnet_route_table_count = 2
@@ -16,7 +16,7 @@ module "vpn_gateway" {
   #tunnel2_preshared_key = var.custom_tunnel2_preshared_key
 }
 
-resource "aws_customer_gateway" "main" {
+resource "aws_customer_gateway" "cg_trisul" {
   bgp_asn    = 65000
   ip_address = "172.83.124.10"
   type       = "ipsec.1"
@@ -30,7 +30,7 @@ resource "aws_customer_gateway" "main" {
 # ...
 #}
 
-resource "aws_vpn_gateway" "vpn_gateway" {
+resource "aws_vpn_gateway" "vg_trisul" {
   vpc_id = aws_vpc.trisul.id
 
   # ...
