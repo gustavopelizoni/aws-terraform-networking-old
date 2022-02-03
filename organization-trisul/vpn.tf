@@ -7,7 +7,7 @@ module "vpn_gateway" {
   vpc_id              = aws_vpc.trisul.id
 
   vpc_subnet_route_table_count = 2
-  vpc_subnet_route_table_ids   = ["rtb-0c907fed7dd3f86fe", "rtb-0d19fe91b393a1f0c", ]
+  vpc_subnet_route_table_ids   = ["rtb-0d19fe91b393a1f0c"]
 
   # tunnel inside cidr & preshared keys (optional)
   tunnel1_inside_cidr = var.custom_tunnel1_inside_cidr
