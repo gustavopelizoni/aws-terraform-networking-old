@@ -18,7 +18,7 @@ module "vpn_gateway" {
 
 resource "aws_customer_gateway" "cg_trisul" {
   bgp_asn    = 65000
-  ip_address = "172.83.124.10"
+  ip_address = "172.83.124.12"
   type       = "ipsec.1"
 
   #tags {
