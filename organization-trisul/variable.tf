@@ -137,3 +137,19 @@ variable "HML-PRV-C" {
   description = "Hml"
   type        = string
 }
+
+
+#Rotas VPN
+variable "Civitas" {
+  default     = "182.168.0.0/24"
+  description = "Rota para Civitas"
+  type        = string
+
+}
+
+## VPN Conection Oracle tunnel1_preshared_key
+variable "custom_tunnel1_preshared_key" {
+  default     = "7wrtqrh5HBZHD0LyXaPamWzCQt2q74lqH8UCEpz8qcIFWcv7af4DLDE8opAy29xQ"
+  description = "Chave tunnel1"
+  type        = string
+}
