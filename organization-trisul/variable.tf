@@ -141,7 +141,7 @@ variable "HML-PRV-C" {
 
 ## VPN Conection Oracle tunnel1_preshared_key
 variable "custom_tunnel1_preshared_key" {
-  default     = "7wrtqrh5HBZHD0LyXaPamWzCQt2q74lqH8UCEpz8qcIFWcv7af4DLDE8opAy29xQ"
+  default     = "mpWBUeMby64*"
   description = "Chave tunnel1"
   type        = string
 }
