@@ -153,3 +153,8 @@ variable "custom_tunnel1_preshared_key" {
   description = "Chave tunnel1"
   type        = string
 }
+
+variable "custom_tunnel1_inside_cidr" {
+  description = "The CIDR block of the inside IP addresses for the first VPN tunnel."
+  default     = ""
+}
