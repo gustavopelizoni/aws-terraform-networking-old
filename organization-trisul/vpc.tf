@@ -363,6 +363,7 @@ resource "aws_route_table" "rt-trisul-private" {
   }
 }
 
+
 #route table default VPC
 #terraform aws associate subnet with route table PUBLIC
 ## Subnet PROD PUB 
