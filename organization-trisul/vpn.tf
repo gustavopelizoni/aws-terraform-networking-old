@@ -5,6 +5,7 @@ module "vpn_gateway" {
   vpn_gateway_id      = aws_vpn_gateway.vg_trisul.id
   customer_gateway_id = aws_customer_gateway.cg_trisul.id
   vpc_id              = aws_vpc.trisul.id
+  static_routes_only  = true
 
   vpc_subnet_route_table_count = 2
   vpc_subnet_route_table_ids   = ["rtb-0d19fe91b393a1f0c"]
