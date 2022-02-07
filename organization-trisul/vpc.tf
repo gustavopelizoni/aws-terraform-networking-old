@@ -360,7 +360,8 @@ resource "aws_route_table" "rt-trisul-private" {
   route {
     cidr_block = "192.168.0.0/24"
     #gateway_id = aws_customer_gateway.cg_trisul.id
-    customer_gateway_id = aws_vpn_gateway.id
+    #customer_gateway_id = aws_customer_gateway.cg
+    customer_gateway_id = aws_customer_gateway.cg_trisul.id
 
   }
 
