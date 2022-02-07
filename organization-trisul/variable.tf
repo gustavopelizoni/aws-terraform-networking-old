@@ -153,7 +153,7 @@ variable "custom_tunnel1_inside_cidr" {
 
 #Rotas VPN
 variable "Civitas" {
-  default     = "192.168.0.0/24"
+  default     = "172.30.112.0/22"
   description = "Rota para Civitas"
   type        = string
 
