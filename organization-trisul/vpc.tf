@@ -342,11 +342,6 @@ resource "aws_route_table" "rt-trisul-public" {
     gateway_id = aws_internet_gateway.igw-trisul.id
   }
 
-  route {
-    cidr_block = var.Civitas
-    gateway_id = aws_internet_gateway.igw-trisul.id
-  }
-
   tags = {
     NameArea = "Infra"
     Name     = "rt-trisul-public"

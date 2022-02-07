@@ -36,7 +36,6 @@ resource "aws_vpn_gateway" "vg_trisul" {
 
   # ...
 }
-
 #Conexao VPN
 #resource "aws_vpn_connection_route" "Civitas" {
 #  destination_cidr_block = "192.168.0.0/24"
