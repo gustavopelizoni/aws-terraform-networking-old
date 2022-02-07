@@ -342,6 +342,15 @@ resource "aws_route_table" "rt-trisul-public" {
     gateway_id = aws_internet_gateway.igw-trisul.id
   }
 
+  #route {
+  #  cidr_block = "192.168.0.0/24"
+    #gateway_id = aws_internet_gateway.igw-trisul.id
+    #gateway_id = vgw-0307376e933c9e1c3
+    #propagating_vgws = vgw-0307376e933c9e1c3
+    #vpn_gateway_id = vgw-0307376e933c9e1c3
+  #  vpc_peering_connection_id = vgw-0307376e933c9e1c3
+  #}
+
   tags = {
     NameArea = "Infra"
     Name     = "rt-trisul-public"
@@ -371,6 +380,7 @@ resource "aws_route_table_association" "rt-prod-pub-a" {
   subnet_id      = aws_subnet.PROD-PUB-A.id
   route_table_id = aws_route_table.rt-trisul-public.id
 }
+
 
 resource "aws_route_table_association" "rt-prod-pub-b" {
   subnet_id      = aws_subnet.PROD-PUB-B.id

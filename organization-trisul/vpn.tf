@@ -36,9 +36,9 @@ resource "aws_vpn_gateway" "vg_trisul" {
 
   # ...
 }
+
 #Conexao VPN
 #resource "aws_vpn_connection_route" "Civitas" {
-#  destination_cidr_block = "192.168.0.0/24"
-#vpn_connection_id      = aws_vpn_connection.OracleCloud.id
-#  vpn_connection_id = aws_vpn_connection.vg_trisul.id
+#destination_cidr_block = "192.168.0.0/24"
+#vpn_connection_id      = aws_vpn_connection.vpn_gateway.id
 #}
