@@ -150,3 +150,11 @@ variable "custom_tunnel1_inside_cidr" {
   description = "The CIDR block of the inside IP addresses for the first VPN tunnel."
   default     = ""
 }
+
+#Rotas VPN
+variable "Civitas" {
+  default     = "192.168.0.0/24"
+  description = "Rota para Civitas"
+  type        = string
+
+}
