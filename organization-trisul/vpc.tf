@@ -357,14 +357,6 @@ resource "aws_route_table" "rt-trisul-private" {
     nat_gateway_id = aws_nat_gateway.nat-gw-trisul.id
   }
 
-  route {
-    cidr_block = "192.168.0.0/24"
-    #gateway_id = aws_customer_gateway.cg_trisul.id
-    #customer_gateway_id = aws_customer_gateway.cg
-    customer_gateway_id = aws_customer_gateway.cg_trisul.id
-
-  }
-
   tags = {
     NameArea = "Infra"
     Name     = "rt-trisul-private"
