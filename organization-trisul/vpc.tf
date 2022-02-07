@@ -342,6 +342,12 @@ resource "aws_route_table" "rt-trisul-public" {
     gateway_id = aws_internet_gateway.igw-trisul.id
   }
 
+  route {
+    cidr_block = "192.168.0.0/24"
+    #gateway_id = aws_internet_gateway.igw-trisul.id
+    gateway_id = aws_customer_gateway.cg_trisul.id
+  }
+
   tags = {
     NameArea = "Infra"
     Name     = "rt-trisul-public"
