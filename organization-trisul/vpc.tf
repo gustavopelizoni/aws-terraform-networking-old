@@ -342,14 +342,12 @@ resource "aws_route_table" "rt-trisul-public" {
     gateway_id = aws_internet_gateway.igw-trisul.id
   }
 
-  #route {
-  #  cidr_block = "192.168.0.0/24"
-    #gateway_id = aws_internet_gateway.igw-trisul.id
-    #gateway_id = vgw-0307376e933c9e1c3
-    #propagating_vgws = vgw-0307376e933c9e1c3
-    #vpn_gateway_id = vgw-0307376e933c9e1c3
-  #  vpc_peering_connection_id = vgw-0307376e933c9e1c3
-  #}
+  route {
+    cidr_block = "172.31.0.0/24"
+    #gateway_id = aws_vpn_gateway.OracleCloud.id
+    gateway_id = aws_vpn_gateway.vg_trisul.id
+    #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
+  }
 
   tags = {
     NameArea = "Infra"
