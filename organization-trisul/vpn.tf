@@ -40,5 +40,6 @@ resource "aws_vpn_gateway" "vg_trisul" {
 resource "aws_vpn_connection_route" "Civitas" {
   destination_cidr_block = "192.168.0.0/24"
   #vpn_connection_id      = aws_vpn_connection.main.id
-  vpn_connection_id = aws_customer_gateway.cg_trisul.id
+  #vpn_connection_id = aws_customer_gateway.cg_trisul.id
+  vpn_connection_id = aws_vpn_connection_route.Civitas.id
 }
