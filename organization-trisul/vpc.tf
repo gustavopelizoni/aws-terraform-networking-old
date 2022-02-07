@@ -343,10 +343,8 @@ resource "aws_route_table" "rt-trisul-public" {
   }
 
   route {
-    cidr_block = "172.31.0.0/24"
-    #gateway_id = aws_vpn_gateway.OracleCloud.id
+    cidr_block = "192.168.0.0/24"
     gateway_id = aws_vpn_gateway.vg_trisul.id
-    #gateway_id = aws_vpn_gateway.aws_vpn_gateway.id
   }
 
   tags = {
@@ -362,6 +360,11 @@ resource "aws_route_table" "rt-trisul-private" {
   route {
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.nat-gw-trisul.id
+  }
+
+  route {
+    cidr_block = "192.168.0.0/24"
+    gateway_id = aws_vpn_gateway.vg_trisul.id
   }
 
   tags = {
