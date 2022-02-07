@@ -343,7 +343,7 @@ resource "aws_route_table" "rt-trisul-public" {
   }
 
   route {
-    cidr_block = "192.168.0.0/24"
+    cidr_block = var.Civitas
     gateway_id = aws_vpn_gateway.vg_trisul.id
   }
 
@@ -363,7 +363,7 @@ resource "aws_route_table" "rt-trisul-private" {
   }
 
   route {
-    cidr_block = "192.168.0.0/24"
+    cidr_block = var.Civitas
     gateway_id = aws_vpn_gateway.vg_trisul.id
   }
 
