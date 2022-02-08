@@ -347,6 +347,18 @@ resource "aws_route_table" "rt-trisul-public" {
     gateway_id = aws_vpn_gateway.vg_trisul.id
   }
 
+  route {
+    cidr_block = var.Civitas2
+    gateway_id = aws_vpn_gateway.vg_trisul.id
+  }
+
+  route {
+    cidr_block = var.Civitas3
+    gateway_id = aws_vpn_gateway.vg_trisul.id
+  }
+
+  
+
   tags = {
     NameArea = "Infra"
     Name     = "rt-trisul-public"
@@ -364,6 +376,16 @@ resource "aws_route_table" "rt-trisul-private" {
 
   route {
     cidr_block = var.Civitas
+    gateway_id = aws_vpn_gateway.vg_trisul.id
+  }
+
+  route {
+    cidr_block = var.Civitas2
+    gateway_id = aws_vpn_gateway.vg_trisul.id
+  }
+
+  route {
+    cidr_block = var.Civitas3
     gateway_id = aws_vpn_gateway.vg_trisul.id
   }
 
