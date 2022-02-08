@@ -174,3 +174,10 @@ variable "Civitas3" {
   type = string
 
 }
+
+variable "full_access_internal" {
+  default = "0.0.0.0/0"
+  description = "Acesso Interno VPC"
+  type = string
+  
+}

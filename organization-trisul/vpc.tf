@@ -368,9 +368,10 @@ resource "aws_route_table" "rt-trisul-public" {
 #Route table private
 resource "aws_route_table" "rt-trisul-private" {
   vpc_id = aws_vpc.trisul.id
+  #for_each = toset(var.Civitas)
 
   route {
-    cidr_block     = "0.0.0.0/0"
+    cidr_block     = var.full_access_internal
     nat_gateway_id = aws_nat_gateway.nat-gw-trisul.id
   }
 
