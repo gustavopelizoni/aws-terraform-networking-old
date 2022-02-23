@@ -36,7 +36,6 @@ Terraform:
 
 ## Overview do Repositório
 
-├── README.md
 ├── organization-bi                         # → networking VPC 
 │   ├── main.tf 
 │   ├── output.tf
@@ -64,6 +63,9 @@ Terraform:
 │   ├── vpn.tf
 │   └── variable.tf
 
+├── README.md
+
+```
 
 ```zsh
 Infraestrutura networking
