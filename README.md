@@ -33,7 +33,7 @@ Terraform:
 
 - [Download](https://www.terraform.io/downloads.html)
 
-
+```zsh
 ## Overview do Repositório
 
 ├── organization-bi                         # → networking VPC 
@@ -64,7 +64,6 @@ Terraform:
 │   └── variable.tf
 
 ├── README.md
-
 ```
 
 ```zsh
@@ -76,8 +75,10 @@ Infraestrutura networking
 ## Environments/Branches
 
 ```
-- Prod
+
 ```zsh
+- Prod
+
 $ terraform validate
 $ terraform plan 
 $ terraform apply 
