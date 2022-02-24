@@ -281,7 +281,7 @@ resource "aws_route_table" "rt-biviholding-public" {
   }
 
   route {
-    cidr_block         = var.oracle-cloud
+    cidr_block = var.oracle-cloud
     gateway_id = aws_internet_gateway.igw-biviholding.id
     #transit_gateway_id = var.transit-gateway
     #gateway_id         = aws_internet_gateway.igw-biviholding.id
@@ -309,9 +309,9 @@ resource "aws_route_table" "rt-biviholding-private" {
   }
 
   route {
-    cidr_block         = var.oracle-cloud
+    cidr_block     = var.oracle-cloud
     nat_gateway_id = aws_nat_gateway.nat-gw-biviholding.id
-  #  transit_gateway_id = var.transit-gateway
+    #  transit_gateway_id = var.transit-gateway
     #gateway_id         = aws_internet_gateway.igw-biviholding.id
   }
 

@@ -357,7 +357,7 @@ resource "aws_route_table" "rt-trisul-public" {
     gateway_id = aws_vpn_gateway.vg_trisul.id
   }
 
-  
+
 
   tags = {
     NameArea = "Infra"
