@@ -1,4 +1,4 @@
-# VPC Variables
+/* # VPC Variables
 variable "region" {
   default     = "us-east-1"
   description = "AWS Region"
@@ -116,4 +116,4 @@ variable "DEV-PUB-E-inovacao" {
 #  default     = "7wrtqrh5HBZHD0LyXaPamWzCQt2q74lqH8UCEpz8qcIFWcv7af4DLDE8opAy29xQ"
 #  description = "Chave tunnel1"
 #  type        = string
-#}
+#} */

@@ -1,4 +1,4 @@
-#customer gateway tunnel
+/* #customer gateway tunnel
 #resource "aws_customer_gateway" "Oracle-Cloud" {
 #  bgp_asn    = 65000
 #  ip_address = "168.138.234.215" #ip gateway oracle cloud
@@ -37,3 +37,4 @@
 #  destination_cidr_block = "172.31.0.0/24"
 #  vpn_connection_id      = aws_vpn_connection.OracleCloud.id
 #}
+ */

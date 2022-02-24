@@ -1,4 +1,4 @@
-terraform {
+/* terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -21,4 +21,4 @@ terraform {
       name = "aws-terraform-networking-inovacao"
     }
   }
-}
+} */

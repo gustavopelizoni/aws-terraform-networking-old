@@ -1,4 +1,4 @@
-# VPC biviholding
+/* # VPC biviholding
 # terraform aws create vpc
 resource "aws_vpc" "biviholding-inovacao" {
   cidr_block           = var.vpc-biviholding-inovacao
@@ -396,3 +396,4 @@ resource "aws_route_table" "rt-biviholding-inovacao-public" {
 #  route_table_id = aws_route_table.rt-biviholding-private.id
 #}
 
+ */
